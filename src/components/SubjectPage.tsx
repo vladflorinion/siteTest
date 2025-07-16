@@ -41,6 +41,7 @@ const SubjectPage: React.FC<SubjectPageProps> = ({ subject, onBack }) => {
       subtitle: 'Stăpânește logica. Construiește performanță.',
       bannerBg: 'bg-gradient-to-r from-blue-100 to-indigo-100',
       bannerImage: 'https://images.pexels.com/photos/6256/mathematics-computation-math-blackboard.jpg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop',
+      bannerImage: 'https://images.pexels.com/photos/6256/mathematics-computation-math-blackboard.jpg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop',
       color: 'bg-blue-500',
       lightColor: 'bg-blue-50',
       cards: [
