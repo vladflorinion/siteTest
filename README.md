@@ -23,6 +23,36 @@ Un website educațional modern destinat pregătirii elevilor pentru examenul de 
    ```bash
    npm install
    ```
+   
+   **Dependențele care se vor instala automat:**
+   
+   *Dependențe principale (runtime):*
+   - `react` (^18.3.1) - Framework-ul React
+   - `react-dom` (^18.3.1) - Pentru renderizarea în browser
+   - `lucide-react` (^0.344.0) - Biblioteca de iconuri
+   - `@fontsource/poppins` (^5.2.6) - Fontul Poppins
+   
+   *Dependențe de dezvoltare (dev dependencies):*
+   - `vite` (^5.4.2) - Build tool și server de dezvoltare
+   - `@vitejs/plugin-react` (^4.3.1) - Plugin React pentru Vite
+   - `typescript` (^5.5.3) - Suport TypeScript
+   - `@types/react` și `@types/react-dom` - Tipuri TypeScript pentru React
+   - `tailwindcss` (^3.4.1) - Framework CSS
+   - `autoprefixer` (^10.4.18) - Plugin PostCSS
+   - `postcss` (^8.4.35) - Procesor CSS
+   - `eslint` și plugin-uri - Pentru verificarea codului
+   
+   **Dacă întâmpini probleme la instalare:**
+   ```bash
+   # Șterge cache-ul npm
+   npm cache clean --force
+   
+   # Șterge node_modules și package-lock.json
+   rm -rf node_modules package-lock.json
+   
+   # Reinstalează totul
+   npm install
+   ```
 
 3. **Pornește serverul de dezvoltare**
    ```bash
