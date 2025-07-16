@@ -2,38 +2,41 @@ import React from 'react';
 import { BookOpen, Calculator, Atom, MapPin } from 'lucide-react';
 import SubjectCard from './SubjectCard';
 
-const SubjectGrid: React.FC = () => {
+interface SubjectGridProps {
+  onSubjectClick: (subject: 'romana' | 'matematica' | 'fizica' | 'geografie') => void;
+}
+
+const SubjectGrid: React.FC<SubjectGridProps> = ({ onSubjectClick }) => {
   const subjects = [
     {
+      id: 'romana' as const,
       title: 'Limba și literatura română',
       icon: BookOpen,
       color: 'bg-pink-400',
       bgColor: 'bg-pink-50',
     },
     {
+      id: 'matematica' as const,
       title: 'Matematică',
       icon: Calculator,
       color: 'bg-blue-500',
       bgColor: 'bg-blue-50',
     },
     {
+      id: 'fizica' as const,
       title: 'Fizică',
       icon: Atom,
       color: 'bg-yellow-500',
       bgColor: 'bg-yellow-50',
     },
     {
+      id: 'geografie' as const,
       title: 'Geografie',
       icon: MapPin,
       color: 'bg-green-500',
       bgColor: 'bg-green-50',
     },
   ];
-
-  const handleSubjectClick = (subject: string) => {
-    console.log(`Navigating to ${subject}`);
-    // Handle navigation logic here
-  };
 
   return (
     <section className="py-16 px-6">
@@ -53,7 +56,7 @@ const SubjectGrid: React.FC = () => {
               icon={subject.icon}
               color={subject.color}
               bgColor={subject.bgColor}
-              onClick={() => handleSubjectClick(subject.title)}
+              onClick={() => onSubjectClick(subject.id)}
             />
           ))}
         </div>
